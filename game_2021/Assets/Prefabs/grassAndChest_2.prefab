@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1819730725993853763}
   - component: {fileID: 1819730725993853760}
   - component: {fileID: 1819730725993853762}
+  - component: {fileID: 8326981006571998345}
   m_Layer: 0
-  m_Name: grass_2 1
+  m_Name: grassAndChest_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -11
   m_Sprite: {fileID: 21300000, guid: b68df41a182374a4697e9b7867ab5fd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,6 +114,19 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &8326981006571998345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819730725993853761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1104fbebc2b05bd4785ebe99a2d95536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSpeed: 6
 --- !u!1001 &6924366356462505088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,6 +134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1819730725993853763}
     m_Modifications:
+    - target: {fileID: 1318607406649119558, guid: 1994d72535f9466438af6c8f23f9014c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2362108428195187915, guid: 1994d72535f9466438af6c8f23f9014c, type: 3}
       propertyPath: m_RootOrder
       value: 0

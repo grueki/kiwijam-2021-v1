@@ -61,7 +61,7 @@ public class PlayerControls : MonoBehaviour
                 var displacement = touch.position - initialPosition;
 
                 //check if the displacement is signficant enough to be a swipe
-                if (Mathf.Abs(displacement.x) < 5f || Mathf.Abs(displacement.y) < 5f)
+                if (Mathf.Abs(displacement.x) < 2f || Mathf.Abs(displacement.y) < 2f)
                 {
                     SpriteRenderer currentState = GetComponent<SpriteRenderer>();
                     if (currentState.sprite == playerStates[1]) //if the player is in ice state then go angry!
