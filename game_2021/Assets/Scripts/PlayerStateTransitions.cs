@@ -73,7 +73,7 @@ public class PlayerStateTransitions : MonoBehaviour
                 var displacement = touch.position - initialPosition;
 
                 //check if the displacement is signficant enough to be a swipe
-                if (Mathf.Abs(displacement.x) > 5f || Mathf.Abs(displacement.y) > 5f)
+                if (Mathf.Abs(displacement.x) > 2f || Mathf.Abs(displacement.y) > 2f)
                 {
                     //get the direction of the touch swipe
                     //get the signed x direction, if (displacement.x >= 0) then 1 else -1
@@ -82,14 +82,12 @@ public class PlayerStateTransitions : MonoBehaviour
                     //up swipe, update movement
                     if (signedDirection == 1)
                     {
-                        //Debug.Log("swiped up");
                         changeSpriteUp();
                     }
 
                     //down swipe, update movement
                     if (signedDirection == -1)
                     {
-                        //Debug.Log("swipe down");
                         changeSpriteDown();
                     }
                 }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 709567593625803576}
   - component: {fileID: 709567593625803583}
-  - component: {fileID: 709567593625803582}
   - component: {fileID: 709567593625803577}
+  - component: {fileID: 4653818594734674751}
   m_Layer: 0
   m_Name: tree
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709567593625803581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.24, y: -0.01, z: 0}
-  m_LocalScale: {x: 1, y: 1.05, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &709567593625803582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709567593625803581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a157b987cd9baef4f85946952781a8cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelSpeed: 10
 --- !u!68 &709567593625803577
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +97,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 4.1}
   m_EdgeRadius: 0
   m_Points:
   - {x: -3.4155173, y: 4.157191}
@@ -135,3 +122,16 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &4653818594734674751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709567593625803581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1104fbebc2b05bd4785ebe99a2d95536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSpeed: 6

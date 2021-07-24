@@ -33,12 +33,8 @@ public class PlayerControls : MonoBehaviour
                 angryTime = 0.75f;
             }
         }
-
+        
         //keyboard controls
-        /*
-        if(Input.GetKeyDown(KeyCode.Space) ){
-            m_rigidbody.AddForce(transform.up * m_jumpForce);
-        }*/
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SpriteRenderer currentState = GetComponent<SpriteRenderer>();
@@ -65,14 +61,9 @@ public class PlayerControls : MonoBehaviour
                 var displacement = touch.position - initialPosition;
 
                 //check if the displacement is signficant enough to be a swipe
-                if (Mathf.Abs(displacement.x) < 5f || Mathf.Abs(displacement.y) < 5f)
+                if (Mathf.Abs(displacement.x) < 2f || Mathf.Abs(displacement.y) < 2f)
                 {
                     SpriteRenderer currentState = GetComponent<SpriteRenderer>();
-                    /*
-                    if (m_grounded && (currentState.sprite == playerStates[0])) //if the player is in water state and on the ground then jump
-                    {
-                        m_rigidbody.AddForce(transform.up * m_jumpForce);
-                    }*/
                     if (currentState.sprite == playerStates[1]) //if the player is in ice state then go angry!
                     {
                         currentState.sprite = playerStates[2];
