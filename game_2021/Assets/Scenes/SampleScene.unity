@@ -763,6 +763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bg2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7707134331900056918, guid: d0e10675adbc949469ba35228652772d, type: 3}
+      propertyPath: levelSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7707134331900056919, guid: d0e10675adbc949469ba35228652772d, type: 3}
       propertyPath: m_SortingOrder
       value: -13
@@ -899,6 +903,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589579533}
     m_Modifications:
+    - target: {fileID: -5473497317316631764, guid: e6188576fc5e47649bc29a2ef2bb638b, type: 3}
+      propertyPath: levelSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4636513963078226273, guid: e6188576fc5e47649bc29a2ef2bb638b, type: 3}
       propertyPath: m_SortingOrder
       value: -12
@@ -1051,6 +1059,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589579533}
     m_Modifications:
+    - target: {fileID: -5473497317316631764, guid: e6188576fc5e47649bc29a2ef2bb638b, type: 3}
+      propertyPath: levelSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4636513963078226273, guid: e6188576fc5e47649bc29a2ef2bb638b, type: 3}
       propertyPath: m_SortingOrder
       value: -12
@@ -1120,6 +1132,10 @@ PrefabInstance:
     - target: {fileID: 7707134331900056917, guid: d0e10675adbc949469ba35228652772d, type: 3}
       propertyPath: m_Name
       value: bg2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707134331900056918, guid: d0e10675adbc949469ba35228652772d, type: 3}
+      propertyPath: levelSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7707134331900056919, guid: d0e10675adbc949469ba35228652772d, type: 3}
       propertyPath: m_SortingOrder
@@ -1842,6 +1858,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589579533}
     m_Modifications:
+    - target: {fileID: -5473497317316631764, guid: e6188576fc5e47649bc29a2ef2bb638b, type: 3}
+      propertyPath: levelSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4636513963078226273, guid: e6188576fc5e47649bc29a2ef2bb638b, type: 3}
       propertyPath: m_SortingOrder
       value: -12
@@ -1906,6 +1926,10 @@ PrefabInstance:
     - target: {fileID: 7707134331900056917, guid: d0e10675adbc949469ba35228652772d, type: 3}
       propertyPath: m_Name
       value: bg2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707134331900056918, guid: d0e10675adbc949469ba35228652772d, type: 3}
+      propertyPath: levelSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7707134331900056919, guid: d0e10675adbc949469ba35228652772d, type: 3}
       propertyPath: m_SortingOrder
