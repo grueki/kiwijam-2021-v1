@@ -7,19 +7,22 @@ public class CollisonHandler : MonoBehaviour
     public Sprite angryMode;
     public List<Sprite> changes = new List<Sprite>(); //dead enemy -> 0, open chest -> 1
     public float thrust;
+    public GameObject DeathMenu;
 
     private Rigidbody2D rb2D;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        DeathMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position.x <= -10){
+            endGame();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -48,7 +51,7 @@ public class CollisonHandler : MonoBehaviour
     //end game due to collision with enemy or out of screen
     void endGame()
     {
-
+        DeathMenu.SetActive(true);
     }
 
     void killEnemy(GameObject enemy)

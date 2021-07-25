@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ceiling
   - Ground
+  - chest
+  - enemy
   layers:
   - Default
   - TransparentFX
