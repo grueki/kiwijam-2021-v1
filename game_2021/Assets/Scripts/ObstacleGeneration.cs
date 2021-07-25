@@ -8,7 +8,7 @@ public class ObstacleGeneration : MonoBehaviour
     public Transform spawnPoint;
     public Transform deletePoint;
 
-    private List<GameObject> activeObstacles = new List<GameObject>();
+    public List<GameObject> activeObstacles = new List<GameObject>();
     private GameObject nextObstacle;
 
     // Start is called before the first frame update
@@ -40,7 +40,7 @@ public class ObstacleGeneration : MonoBehaviour
     }
 
     //delete the obstacle from the back
-    private void DeleteObstacle()
+    public void DeleteObstacle()
     {
         Destroy(activeObstacles[0]);
         activeObstacles.RemoveAt(0);

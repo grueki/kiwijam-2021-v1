@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayBtn : MonoBehaviour
 {
     void OnMouseDown(){
-        GetComponentInParent<MenuController>().PlayGame();
+        Time.timeScale = 1;
+        transform.parent.gameObject.SetActive(false);
     }
-
 }
