@@ -12,10 +12,16 @@ public class PlayerControls : MonoBehaviour
 
     private float angryTime = 0.75f;
 
+    //audio
+    private AudioSource fromPlayerPC;
+    public AudioClip goAngry;
+
     //order of states: Liquid(0), Solid(1), Gas(2)
     public List<Sprite> playerStates = new List<Sprite>();
 
-    void Start(){
+    void Start()
+    {
+        fromPlayerPC = GetComponent<AudioSource>();
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_grounded = false;
     }
@@ -40,6 +46,7 @@ public class PlayerControls : MonoBehaviour
             SpriteRenderer currentState = GetComponent<SpriteRenderer>();
             if (currentState.sprite == playerStates[1]) //if the player is in ice state then go angry!
             {
+                fromPlayerPC.PlayOneShot(goAngry);
                 currentState.sprite = playerStates[2];
             }
         }
@@ -66,6 +73,7 @@ public class PlayerControls : MonoBehaviour
                     SpriteRenderer currentState = GetComponent<SpriteRenderer>();
                     if (currentState.sprite == playerStates[1]) //if the player is in ice state then go angry!
                     {
+                        fromPlayerPC.PlayOneShot(goAngry);
                         currentState.sprite = playerStates[2];
                     }
                 }

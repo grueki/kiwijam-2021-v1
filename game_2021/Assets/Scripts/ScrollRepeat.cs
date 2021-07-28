@@ -6,12 +6,13 @@ public class ScrollRepeat : MonoBehaviour
 {
     private float length;
 
-    public float levelSpeed; // TODO: make private and inherit from GameController
+    private float levelSpeed; // TODO: make private and inherit from GameController
 
     // Start is called before the first frame update
     void Start()
     {
         length = GetComponent<SpriteRenderer>().bounds.size.x;
+        levelSpeed = GetComponentInParent<IncreaseGameSpeed>().gameSpeed;
     }
 
     // Update is called once per frame

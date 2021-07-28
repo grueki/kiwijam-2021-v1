@@ -25,6 +25,11 @@ public class PlayerStateTransitions : MonoBehaviour
     float gasOffsetX = 0f;
     float gasOffsetY = -0.45f;
 
+    //audio
+    public AudioSource fromPlayerPST;
+    public AudioClip upTransition;
+    public AudioClip downTransition;
+
     //private int currentState; //order of states: Liquid(0), Solid(1), SolidAngry(2), Gas(3)
     public List<Sprite> playerStates = new List<Sprite>(); 
 
@@ -42,6 +47,9 @@ public class PlayerStateTransitions : MonoBehaviour
         playerSR.sprite = playerStates[0];
         playerBC.size = new Vector2(liquidStateSizeX, liquidStateSizeY); //set collider size
         playerBC.offset = new Vector2(liquidOffsetX, liquidOffsetY); //set collider offset
+
+        //change the players rigid body to dynamic to avoid high speed collider pass through
+        playerBody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
 
     // Update is called once per frame
@@ -100,12 +108,14 @@ public class PlayerStateTransitions : MonoBehaviour
     {   
         if (playerSR.sprite == playerStates[0]) //if player is liquid
         {
+            fromPlayerPST.PlayOneShot(upTransition);
             playerSR.sprite = playerStates[1]; //change to solid
             playerBC.size = new Vector2(solidStateSizeX, solidStateSizeY); //change collider size
             playerBC.offset = new Vector2(solidOffsetX, solidOffsetY); //change collider offset
         }
         else if (playerSR.sprite == playerStates[1]) //if player is solid
         {
+            fromPlayerPST.PlayOneShot(upTransition);
             playerSR.sprite = playerStates[3]; //change to gas
             playerBC.size = new Vector2(gasStateSizeX, gasStateSizeY); //change collider size
             playerBC.offset = new Vector2(gasOffsetX, gasOffsetY); //change collider offset
@@ -117,6 +127,7 @@ public class PlayerStateTransitions : MonoBehaviour
     {
         if (playerSR.sprite == playerStates[3]) //if player is gas
         {
+            fromPlayerPST.PlayOneShot(downTransition);
             playerSR.sprite = playerStates[1]; //change to solid
             playerBC.size = new Vector2(solidStateSizeX, solidStateSizeY); //change collider size
             playerBC.offset = new Vector2(solidOffsetX, solidOffsetY); //change collider offset
@@ -124,6 +135,7 @@ public class PlayerStateTransitions : MonoBehaviour
         }
         else if (playerSR.sprite == playerStates[1]) //if player is solid
         {
+            fromPlayerPST.PlayOneShot(downTransition);
             playerSR.sprite = playerStates[0]; //change to liquid
             playerBC.size = new Vector2(liquidStateSizeX, liquidStateSizeY); //change collider size
             playerBC.offset = new Vector2(liquidOffsetX, liquidOffsetY); //change collider offset
