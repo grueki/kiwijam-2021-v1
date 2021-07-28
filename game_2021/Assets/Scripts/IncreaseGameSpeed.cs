@@ -10,7 +10,6 @@ public class IncreaseGameSpeed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameSpeed = 6;
         time = 0;
         incrementTimer = 1.0f;
         
@@ -22,7 +21,7 @@ public class IncreaseGameSpeed : MonoBehaviour
         time += Time.deltaTime;
         if (time >= incrementTimer)
         {
-            gameSpeed += 0.1f;
+            gameSpeed += 0.0005f;
         }
     }
 }

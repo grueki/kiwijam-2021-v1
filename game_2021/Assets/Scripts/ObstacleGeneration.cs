@@ -40,6 +40,7 @@ public class ObstacleGeneration : MonoBehaviour
         int index = Random.Range(0, listOfObstacles.Count);
         nextObstacle = listOfObstacles[index];
         GameObject go = Instantiate(nextObstacle, spawnPoint.position, spawnPoint.rotation);
+        go.transform.parent = transform;
         activeObstacles.Add(go);
     }
 

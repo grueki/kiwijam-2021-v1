@@ -28,6 +28,11 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {   
+        if(transform.position.x < 0.25f)
+        {
+            transform.Translate(Vector3.right * Time.deltaTime);
+        }
+
         //timer for angry state change
         if (GetComponent<SpriteRenderer>().sprite == playerStates[2])
         {
